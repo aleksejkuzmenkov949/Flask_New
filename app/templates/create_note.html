@@ -1,0 +1,11 @@
+{% extends 'index.html' %}
+
+{% block content %}
+<form method="post">
+    <h2>Create New Note</h2>
+    <input type="text" name="title" placeholder="Title" required>
+    <textarea name="content" placeholder="Content" required></textarea>
+    <button type="submit">Create Note</button>
+</form>
+<a href="{{ url_for('notes.notes_list') }}">Back to Notes</a>
+{% endblock %}
